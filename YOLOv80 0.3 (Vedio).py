@@ -16,8 +16,8 @@ cap.set(cv2.CAP_PROP_FRAME_WIDTH, 1280)
 cap.set(cv2.CAP_PROP_FRAME_HEIGHT, 720)
 
 HAS_GPU = torch.cuda.is_available()
-device  = 0 if HAS_GPU else "cpu"   # لو فيه GPU استخدمه، غير هيك CPU
-half    = HAS_GPU                   # FP16 بس مع GPU
+device = 0 if (USE_GPU and HAS_GPU) else "cpu"   # لو فيه GPU استخدمه، غير هيك CPU
+half = USE_FP16 and device != "cpu"                # FP16 بس مع GPU
 print(f"Using: {'CUDA:0' if HAS_GPU else 'CPU'} | FP16={half}")
 
 t0, frames = time.time(), 0

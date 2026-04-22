@@ -1,0 +1,27 @@
+# ---- Core runtime (always required) ----
+fastapi>=0.110
+uvicorn[standard]>=0.29
+python-multipart>=0.0.9       # required for UploadFile (face enroll endpoint)
+pydantic>=2.6
+pydantic-settings>=2.2
+python-dotenv>=1.0
+
+# ---- Database ----
+SQLAlchemy>=2.0
+psycopg[binary]>=3.1          # PostgreSQL driver
+alembic>=1.13
+pgvector>=0.2.5               # optional at runtime; adapter auto-falls-back to ARRAY
+
+# ---- Scheduling / background jobs ----
+APScheduler>=3.10
+
+# ---- Vision (install only on boxes that will run the pipeline) ----
+opencv-python>=4.9
+numpy>=1.26
+# ultralytics>=8.1            # YOLOv8 + ByteTrack; uncomment when provisioning a vision node
+# insightface>=0.7            # face detection + embeddings
+# onnxruntime>=1.17           # insightface backend (or onnxruntime-gpu)
+
+# ---- Dev tooling ----
+pytest>=8.0
+ruff>=0.3
