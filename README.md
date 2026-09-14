@@ -1,7 +1,27 @@
-His MVP project focuses on building a complete intelligent camera streaming and tracking system using Python.
-The system starts with real-time camera input (webcam / RTSP) and video display with FPS counter,
-then integrates YOLO for person detection, ByteTrack for multi-object tracking,
-and a backend layer utilizing FastAPI and PostgreSQL for data storage and management.
+# Real-Time Person Tracking & Face Verification System
 
-Later sprints include developing an interactive Streamlit dashboard to visualize detected persons,
-display active IDs, and provide time-based insights for incident review and analytics.
+Computer vision system for real-time person detection, 
+multi-object tracking, and face verification using Python.
+
+## Features
+- Real-time camera input (Webcam / RTSP streams)
+- Person detection using YOLOv8
+- Multi-object tracking using ByteTrack
+- Face verification for identity confirmation
+- FPS counter and live video display
+- FastAPI backend with PostgreSQL for data storage
+- Streamlit dashboard for analytics and incident review
+
+## Tech Stack
+Python · YOLOv8 · ByteTrack · OpenCV · FastAPI · 
+PostgreSQL · Streamlit
+
+## Use Cases
+- Security camera monitoring
+- People counting and tracking
+- Incident review and analytics
+
+## Setup
+```
+pip install ultralytics opencv-python fastapi postgresql streamlit
+```
